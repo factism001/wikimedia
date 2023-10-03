@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bug Detail</title>
+</head>
+<body>
+    <h2>Bug Detail</h2>
+    <p><strong>Description:</strong> {{ bug.description }}</p>
+    <p><strong>Type:</strong> {{ bug.get_bug_type_display }}</p>
+    <p><strong>Report Date:</strong> {{ bug.report_date }}</p>
+    <p><strong>Status:</strong> {{ bug.get_status_display }}</p>
+    <a href="{% url 'index' %}">Back to Bug List</a>
+</body>
+</html>
+

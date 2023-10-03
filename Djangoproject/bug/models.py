@@ -19,7 +19,7 @@ class Bug(models.Model):
 
     description = models.TextField()
     bug_type = models.CharField(max_length=20, choices=BUG_TYPES)
-    report_date = models.DateField(auto_now_add=True)
+    report_date = models.DateField()
     status = models.CharField(max_length=20, choices=STATUS_CHOICES)
 
     def __str__(self):
