@@ -4,13 +4,13 @@
 
 {% block content %}
     <h2>Bug List</h2>
-    <div class="list-group">
+    <ul class="list-group">
         {% for bug in bug_list %}
-            <a href="{% url 'view_bug' bug.id %}" class="list-group-item list-group-item-action">
-                {{ bug.description }}
-            </a>
+            <li class="list-group-item">
+                <a href="{% url 'view_bug' bug.id %}">{{ bug.description }}</a>
+            </li>
         {% endfor %}
-    </div>
+    </ul>
     <p><a href="{% url 'register_bug' %}" class="btn btn-primary">Register a Bug</a></p>
 {% endblock %}
 

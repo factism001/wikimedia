@@ -1,15 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Bug Detail</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}Bug Detail{% endblock %}
+
+{% block content %}
     <h2>Bug Detail</h2>
-    <p><strong>Description:</strong> {{ bug.description }}</p>
-    <p><strong>Type:</strong> {{ bug.get_bug_type_display }}</p>
-    <p><strong>Report Date:</strong> {{ bug.report_date }}</p>
-    <p><strong>Status:</strong> {{ bug.get_status_display }}</p>
-    <a href="{% url 'index' %}">Back to Bug List</a>
-</body>
-</html>
+    <div class="card">
+        <div class="card-body">
+            <p><strong>Description:</strong> {{ bug.description }}</p>
+            <p><strong>Type:</strong> {{ bug.get_bug_type_display }}</p>
+            <p><strong>Report Date:</strong> {{ bug.report_date }}</p>
+            <p><strong>Status:</strong> {{ bug.get_status_display }}</p>
+        </div>
+    </div>
+    <a href="{% url 'index' %}" class="btn btn-secondary mt-2">Back to Bug List</a>
+{% endblock %}
 
